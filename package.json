@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eren5960/gatsby-remark-autolink-headers-turkish.git",
+    "url": "https://github.com/eren5960/gatsby-remark-autolink-headers-turkish.git"
   },
   "scripts": {
     "build": "babel src --out-dir . --ignore \"**/__tests__\"",
