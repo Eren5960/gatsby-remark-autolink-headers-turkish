@@ -54,6 +54,21 @@ module.exports = (
       id = removeAccents ? deburr(slug) : slug
     }
     const data = patch(node, `data`, {})
+    id = id.replace(/Ğ/g, 'g')
+        .replace(/Ü/g, 'u')
+        .replace(/Ş/g, 's')
+        .replace(/I/g, 'i')
+        .replace(/İ/g, 'i')
+        .replace(/Ö/g, 'o')
+        .replace(/Ç/g, 'c')
+        .replace(/ğ/g, 'g')
+        .replace(/ü/g, 'u')
+        .replace(/ş/g, 's')
+        .replace(/ı/g, 'i')
+        .replace(/ö/g, 'o')
+        .replace(/ç/g, 'c')
+        .replace(/i̇/g, "i")
+        .replace(/-+/g, "-")
 
     patch(data, `id`, id)
     patch(data, `htmlAttributes`, {})

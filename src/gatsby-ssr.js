@@ -55,7 +55,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
   //  - https://github.com/gatsbyjs/gatsby/pull/21083
   const script = `
     document.addEventListener("DOMContentLoaded", function(event) {
-      var hash = window.decodeURI(location.hash.replace('#', ''))
+      var hash = window.decodeURI(location.hash.replace('#', '').replace(/Ğ/g, 'g').replace(/Ü/g, 'u').replace(/Ş/g, 's').replace(/I/g, 'i').replace(/İ/g, 'i').replace(/Ö/g, 'o').replace(/Ç/g, 'c').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c').replace(/i̇/g, "i").replace(/-+/g, "-"))
       if (hash !== '') {
         var element = document.getElementById(hash)
         if (element) {
