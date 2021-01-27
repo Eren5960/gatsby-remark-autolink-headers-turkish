@@ -29,6 +29,7 @@ exports.onInitialClientRender = function (_, pluginOptions) {
     var offset = getTargetOffset(window.location.hash);
 
     if (offset !== null) {
+      console.log(offset);
       window.scrollTo(0, offset);
     }
   });
